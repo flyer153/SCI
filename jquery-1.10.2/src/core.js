@@ -51,6 +51,7 @@ var
 	jQuery = function( selector, context ) {
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// jQuery 方法其实是 jQuery.fn.init 构造器的强化
+		//在函数执行完后return就是一个new构造函数的过程。返回的是一个jquery对象。目的是可以调用一些方法。
 		return new jQuery.fn.init( selector, context, rootjQuery );
 	},
 
@@ -122,6 +123,9 @@ var
 	};
 
 // 原型对象扩展
+/*
+ * 给jquery对象添加一些方法和属性。
+ */
 jQuery.fn = jQuery.prototype = {
 	// The current version of jQuery being used
 	jquery: core_version,
